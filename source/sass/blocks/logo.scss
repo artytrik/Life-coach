@@ -1,0 +1,21 @@
+.logo {
+  color: $black;
+  display: block;
+
+  &__strong {
+    display: block;
+    text-align: center;
+
+    @include font(17px, 1.4em);
+    font-family: "Lulo Bold";
+  }
+
+  &__span {
+    display: block;
+    text-align: center;
+
+    @include font(14px, 1.4em);
+    font-family: "Avenir Light";
+    letter-spacing: 0.15em;
+  }
+}

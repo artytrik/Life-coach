@@ -1,0 +1,47 @@
+@mixin clear-ul() {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin pseudo() {
+  content: "";
+
+  position: absolute;
+}
+
+@mixin pseudo-top($width, $height, $top: false, $left: false) {
+  content: "";
+
+  position: absolute;
+  width: $width;
+  height: $height;
+  @if $top { top: $top; }
+  @if $left { left: $left; }
+}
+
+@mixin back($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@mixin font($size: false, $lh: false, $family: false, $colour: false) {
+  @if $size { font-size: $size; }
+  @if $lh { line-height: $lh; }
+  @if $family { font-family: $family, "Arial", sans-serif; }
+  @if $colour { color: $colour; }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet-width) {
+    @content;
+  }
+}

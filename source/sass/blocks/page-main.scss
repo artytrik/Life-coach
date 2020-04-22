@@ -1,0 +1,14 @@
+.page-main {
+  &__header {
+    font-size: 35px;
+    line-height: 1.2em;
+    font-family: "Lulo Bold", "Arial", sans-serif;
+    letter-spacing: -0.1em;
+  }
+
+  &__container {
+    max-width: $desktop-width;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+}

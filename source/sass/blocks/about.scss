@@ -1,0 +1,51 @@
+.about {
+  &__wrapper {
+    position: relative;
+    padding: 90px 30px;
+
+    &::before {
+      @include pseudo;
+
+      width: 426px;
+      height: 636px;
+      top: -50px;
+      left: -100px;
+      z-index: -1;
+      @include back("../img/flowers-about.png");
+      background-size: cover;
+    }
+  }
+
+  &__inner-wrapper {
+    margin-left: 80px;
+
+    background-color: $white;
+  }
+
+  &__description {
+    width: 45%;
+    line-height: 1.7em;
+  }
+
+  &__image {
+    position: absolute;
+    top: -50px;
+    right: 50px;
+
+    width: 370px;
+    height: 400px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border: 15px solid rgba(255, 255, 255, 1);
+
+    & img {
+      position: absolute;
+      top: -100px;
+    }
+  }
+
+  &__contact {
+    margin: 0 35%;
+    margin-top: 40px;
+  }
+}

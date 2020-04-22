@@ -1,0 +1,20 @@
+.page-header {
+  background-color: $pink;
+
+  &__wrapper {
+    max-width: $desktop-width;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo-wrapper {
+    width: 30%;
+    margin-top: 15px;
+  }
+
+  &__navigation {
+    width: 50%;
+  }
+}

@@ -1,0 +1,25 @@
+.intro {
+  @include back("../img/book.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 0 -50px;
+
+  &__wrapper {
+    padding: 80px 30px 100px;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 40px;
+
+    @include font(27px, 1em, "Lulo Bold");
+    text-align: center;
+  }
+
+  &__author {
+    display: block;
+    font-size: 17px;
+    letter-spacing: 0.18em;
+    text-align: center;
+  }
+}
