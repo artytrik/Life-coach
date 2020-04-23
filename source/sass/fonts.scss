@@ -1,17 +1,17 @@
 @font-face {
-  font-family: "Lulo Bold";
+  font-family: "Candara";
   font-style: normal;
   font-weight: normal;
   font-display: swap;
-  src: url("../fonts/lulo.woff2") format("woff2"),
-  url("../fonts/lulo.woff") format("woff")
+  src: url("../fonts/Candara.woff2") format("woff2"),
+  url("../fonts/Candara.woff") format("woff")
 }
 
 @font-face {
-  font-family: "Avenir Light";
+  font-family: "Candara Bold";
   font-style: normal;
-  font-weight: normal;
+  font-weight: bold;
   font-display: swap;
-  src: url("../fonts/avenir-light.woff") format("woff"),
-  url("../fonts/avenir-light.woff2") format("woff2")
+  src: url("../fonts/Candara-Bold.woff") format("woff"),
+  url("../fonts/Candara-Bold.woff2") format("woff2")
 }

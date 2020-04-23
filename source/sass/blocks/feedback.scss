@@ -1,0 +1,94 @@
+.feedback {
+  &__more-link {
+    position: relative;
+
+    display: block;
+    width: 100px;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid $white;
+
+    color: $black;
+    font-size: 12px;
+
+    &::after {
+      @include pseudo;
+
+      top: 15px;
+      right: 10px;
+
+      width: 30px;
+      height: 10px;
+
+      @include back("../img/right-arrow.png");
+      background-size: cover;
+    }
+
+    &:hover {
+      border-color: $black;
+    }
+  }
+
+  &__list {
+    @include clear-ul;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 32%;
+    padding: 20px;
+    box-sizing: border-box;
+
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &__inner-wrapper {
+    border-bottom: 1px solid $black;
+  }
+
+  &__time {
+    font-size: 12px;
+  }
+
+  &__name {
+    @include font(22px, 1.4em, "Candara Bold");
+    text-transform: uppercase;
+  }
+
+  &__review {
+    font-size: 17px;
+    line-height: normal;
+  }
+
+  &__item-more-link {
+    margin: 0 20%;
+    padding: 5px 10px 3px;
+    margin-bottom: 15px;
+    width: 110px;
+  }
+
+  &__instagram {
+    position: relative;
+    display: block;
+    margin-top: 25px;
+
+    color: $black;
+    margin-left: 60px;
+
+    &::before {
+      @include pseudo;
+
+      top: -14px;
+      left: -55px;
+
+      width: 42px;
+      height: 42px;
+
+      @include back("../img/instagram.jpg");
+    }
+  }
+}

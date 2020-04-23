@@ -1,0 +1,40 @@
+.reviews {
+  &__wrapper {
+    @include back("../img/flowers-reviews.png");
+    padding: 80px 80px 100px;
+    background-size: cover;
+    box-sizing: border-box;
+    margin: 30px auto;
+  }
+
+  &__inner-wrapper {
+    background-color: $white;
+    padding: 30px 50px;
+    color: $grey;
+  }
+
+  &__header {
+    position: relative;
+    text-align: center;
+    letter-spacing: 0.25em;
+    font-size: 20px;
+    margin-bottom: 40px;
+
+    &::after {
+      @include pseudo;
+
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: 10%;
+      height: 2px;
+
+      background-color: $grey;
+    }
+  }
+
+  &__description {
+    text-align: center;
+  }
+}

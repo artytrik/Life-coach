@@ -11,6 +11,10 @@
     display: block;
     color: $black;
     padding: 25px 0;
+    text-transform: uppercase;
+    font-family: "Candara Bold", "Arial", sans-serif;
+    font-weight: bold;
+    font-size: 12px;
 
     &:hover,
     &:active {

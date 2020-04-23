@@ -1,0 +1,35 @@
+.sessions {
+  &__list {
+    @include clear-ul;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 32%;
+  }
+
+  &__image {
+    margin-bottom: 5px;
+  }
+
+  &__item-header {
+    margin: 0;
+
+    @include font(23px, 1.4em, "Candara Bold");
+    letter-spacing: normal;
+    text-align: center;
+  }
+
+  &__item-description {
+    width: 80%;
+    margin: 15px auto;
+    text-align: center;
+    letter-spacing: normal;
+  }
+
+  &__item-button {
+    margin: 0 auto;
+  }
+}

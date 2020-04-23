@@ -2,13 +2,15 @@
   &__header {
     font-size: 35px;
     line-height: 1.2em;
-    font-family: "Lulo Bold", "Arial", sans-serif;
-    letter-spacing: -0.1em;
+    font-family: "Candara Bold", "Arial", sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 30px;
   }
 
   &__container {
     max-width: $desktop-width;
-    margin: 0 auto;
+    margin: 60px auto;
     padding: 0 30px;
   }
 }

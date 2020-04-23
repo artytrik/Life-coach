@@ -6,16 +6,16 @@
     display: block;
     text-align: center;
 
-    @include font(17px, 1.4em);
-    font-family: "Lulo Bold";
+    @include font(20px, 1.4em);
+    font-family: "Candara Bold", "Arial", sans-serif;
+    text-transform: uppercase;
   }
 
   &__span {
     display: block;
     text-align: center;
 
-    @include font(14px, 1.4em);
-    font-family: "Avenir Light";
+    @include font(15px, 1.4em);
     letter-spacing: 0.15em;
   }
 }

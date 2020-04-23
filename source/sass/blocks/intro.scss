@@ -6,14 +6,17 @@
 
   &__wrapper {
     padding: 80px 30px 100px;
+    margin: 0 auto;
   }
 
   &__title {
     display: block;
     margin-bottom: 40px;
 
-    @include font(27px, 1em, "Lulo Bold");
+    @include font(27px, 1em, "Candara");
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
   }
 
   &__author {

@@ -1,0 +1,73 @@
+.programme {
+  overflow: hidden;
+
+  &__big-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__shared-wrapper {
+    position: relative;
+
+    max-width: 650px;
+    @include back("../img/flowers-reviews.png");
+    background-size: cover;
+    padding: 20px 80px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0 auto;
+
+    &::before, &::after {
+      @include pseudo;
+
+      top: 0;
+
+      width: 400px;
+      height: 400px;
+    }
+
+    &::before {
+      left: -400px;
+
+      @include back("../img/programme-1.jpg");
+    }
+
+    &::after {
+      right: -400px;
+
+      @include back("../img/programme-2.jpg");
+    }
+  }
+
+  &__inner-wrapper {
+    background-color: $white;
+    padding: 10px;
+  }
+
+  &__inner-header {
+    font-size: 49px;
+    line-height: 1em;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  &__first-description {
+    display: block;
+    color: $grey;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 17px;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  &__button {
+    width: 170px;
+    margin: 0 auto;
+  }
+}
