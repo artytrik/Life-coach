@@ -1,4 +1,8 @@
 .feedback {
+  &__wrapper {
+    margin-bottom: 0;
+  }
+
   &__more-link {
     position: relative;
 
@@ -90,5 +94,10 @@
 
       @include back("../img/instagram.jpg");
     }
+  }
+
+  &__logo {
+    width: 10%;
+    margin: 0 auto;
   }
 }

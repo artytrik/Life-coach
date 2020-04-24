@@ -30,7 +30,7 @@ gulp.task('serve', () => {
   });
 
   gulp.watch('source/sass/**/*.{scss,sass}', gulp.series('style'));
-  gulp.watch('source/img/**/*.{png,jpg,svg}', gulp.series('copy', 'reload'));
+  gulp.watch('source/img/**/*.{png,jpg,svg,webp}', gulp.series('copy', 'reload'));
   gulp.watch('source/*.html', gulp.series('copy', 'reload'));
 });
 
@@ -43,7 +43,7 @@ gulp.task('copy', () => (
   gulp.src([
     'source/fonts/**/*.{woff,woff2}',
     'source/*.html',
-    'source/img/**/*.{png,jpg,svg}'
+    'source/img/**/*.{png,jpg,svg,webp}'
   ], {
     base: 'source'
   })

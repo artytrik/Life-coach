@@ -1,0 +1,16 @@
+.social-list {
+  @include clear-ul;
+
+  display: flex;
+  justify-content: space-between;
+  width: 12%;
+
+  &__item {
+    width: 25px;
+    height: 25px;
+  }
+
+  &__link {
+    display: block;
+  }
+}

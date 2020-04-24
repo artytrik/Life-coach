@@ -1,0 +1,38 @@
+.page-footer {
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.6),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.6),
+    0 0 5px rgba(0, 0, 0, 0.6);
+
+  background-color: $dark-pink;
+  background-image: url("../img/blur.png");
+  color: $white;
+
+  &__wrapper {
+    max-width: $desktop-width;
+    margin: 0 auto;
+    padding: 30px;
+  }
+
+  &__inner-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    width: 7%;
+    margin-top: -20px;
+  }
+
+  &__text {
+    margin: 0;
+  }
+
+  &__link {
+    display: block;
+    color: $white;
+  }
+
+  &__copyright {
+    margin-left: 16%;
+  }
+}
