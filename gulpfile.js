@@ -8,6 +8,8 @@ const rename = require('gulp-rename');
 const del = require('del');
 const ghPages = require('gulp-gh-pages');
 const babel = require('gulp-babel');
+const imagemin = require('gulp-imagemin');
+const imgCompress = require('imagemin-jpeg-recompress');
 
 const dirs = {
   src: 'source',
@@ -35,6 +37,22 @@ gulp.task('js', () => (
     .pipe(babel({ presets: ['@babel/preset-env']}))
     .pipe(gulp.dest(`${dirs.dest}/js`))
 ));
+
+gulp.task('img', function() {
+  return gulp.src('source/img/**/*')
+  .pipe(imagemin([
+    imgCompress({
+      loops: 4,
+      min: 70,
+      max: 80,
+      quality: 'high'
+    }),
+    imagemin.gifsicle(),
+    imagemin.optipng(),
+    imagemin.svgo()
+  ]))
+  .pipe(gulp.dest('build/img'));
+});
 
 gulp.task('serve', () => {
   server.init({
@@ -77,6 +95,6 @@ gulp.task('deploy', () => (
   )
 );
 
-gulp.task('build', gulp.series('clean', gulp.parallel('copy', 'style', 'js')));
+gulp.task('build', gulp.series('clean', gulp.parallel('copy', 'style', 'js', 'img')));
 
 gulp.task('start', gulp.series('build', 'serve'));

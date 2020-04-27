@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Life Coach</title>
   <link href="css/style.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 </head>
 <body>
   <header class="page-header">
@@ -17,16 +18,16 @@
       </div>
       <nav class="page-header__navigation">
         <ul class="site-list">
-          <li class="site-list__item"><a href="#" class="site-list__link">Home</a></li>
-          <li class="site-list__item"><a href="#" class="site-list__link">Sessions</a></li>
-          <li class="site-list__item"><a href="#" class="site-list__link">Programme</a></li>
-          <li class="site-list__item"><a href="#" class="site-list__link">Feedback</a></li>
+          <li class="site-list__item"><a href="#main" class="site-list__link site-list__link--active anchor">Home</a></li>
+          <li class="site-list__item"><a href="#sessions" class="site-list__link anchor">Sessions</a></li>
+          <li class="site-list__item"><a href="#programme" class="site-list__link anchor">Programme</a></li>
+          <li class="site-list__item"><a href="#feedback" class="site-list__link anchor">Feedback</a></li>
           <li class="site-list__item"><a href="#" class="site-list__link">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
-  <main class="page-main">
+  <main class="page-main page-main__scroll" id="main">
     <h1 class="visually-hidden">Emilia Vladimirova - Certified Life Coach</h1>
     <section class="intro">
       <div class="intro__wrapper page-main__container">
@@ -48,14 +49,37 @@
     </section>
     <section class="reviews">
       <div class="reviews__wrapper page-main__container">
-        <div class="reviews__inner-wrapper">
-          <h2 class="reviews__header page-main__header">Testimonials</h2>
-          <p class="reviews__description">“Testimonials work great. Showing your reviews in quote marks has a powerful effect on customers and makes them more likely to trust you.”</p>
-          <p class="reviews__description">— Name, Title</p>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="reviews__back-wrapper swiper-slide">
+              <div class="reviews__inner-wrapper">
+                <h2 class="reviews__header page-main__header">Testimonials</h2>
+                <p class="reviews__description">“Testimonials work great. Showing your reviews in quote marks has a powerful effect on customers and makes them more likely to trust you.”</p>
+                <p class="reviews__description">— Name, Title</p>
+              </div>
+            </div>
+            <div class="reviews__back-wrapper swiper-slide">
+              <div class="reviews__inner-wrapper">
+                <h2 class="reviews__header page-main__header">Testimonials</h2>
+                <p class="reviews__description">“Testimonials work great. Showing your reviews in quote marks has a powerful effect on customers and makes them more likely to trust you.”</p>
+                <p class="reviews__description">— Name, Title</p>
+              </div>
+            </div>
+            <div class="reviews__back-wrapper swiper-slide">
+              <div class="reviews__inner-wrapper">
+                <h2 class="reviews__header page-main__header">Testimonials</h2>
+                <p class="reviews__description">“Testimonials work great. Showing your reviews in quote marks has a powerful effect on customers and makes them more likely to trust you.”</p>
+                <p class="reviews__description">— Name, Title</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
-    <section class="sessions">
+    <section class="sessions page-main__block page-main__scroll" id="sessions">
       <div class="sessions__wrapper page-main__container">
         <h2 class="sessions__header page-main__header">Psychological Sessions</h2>
         <ul class="sessions__list">
@@ -80,7 +104,7 @@
         </ul>
       </div>
     </section>
-    <section class="programme">
+    <section class="programme page-main__block page-main__scroll" id="programme">
       <div class="programme__wrapper page-main__container">
         <h2 class="programme__header page-main__header">programme "seischastie"</h2>
       </div>
@@ -93,7 +117,7 @@
         </div>
       </div>
     </section>
-    <section class="feedback">
+    <section class="feedback page-main__block page-main__scroll" id="feedback">
       <div class="feedback__wrapper page-main__container">
         <h2 class="feedback__header page-main__header">Feedback</h2>
         <a href="#" class="feedback__more-link">See more</a>
@@ -156,6 +180,34 @@
       </div>
     </footer>
   </main>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="js/index.js"></script>
+  <script src="js/swiper.js"></script>
+  <style>
+    .swiper-pagination-bullet {
+      border-radius: 0;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: rgb(166, 36, 76);
+    }
+
+    .swiper-button-prev {
+      left: 0;
+      width: 50px;
+      height: 50px;
+      background-color: rgb(166, 36, 76);
+      color: #fff;
+    }
+
+    .swiper-button-next {
+      right: 0;
+      width: 50px;
+      height: 50px;
+      background-color: rgb(166, 36, 76);
+      color: #fff;
+    }
+  </style>
 </body>
 </html>

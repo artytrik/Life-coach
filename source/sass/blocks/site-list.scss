@@ -10,7 +10,7 @@
   &__link {
     display: block;
     color: $black;
-    padding: 25px 0;
+    padding: 20px 0 25px;
     text-transform: uppercase;
     font-family: "Candara Bold", "Arial", sans-serif;
     font-weight: bold;
@@ -18,6 +18,10 @@
 
     &:hover,
     &:active {
+      color: $yellow;
+    }
+
+    &--active {
       color: $yellow;
     }
   }

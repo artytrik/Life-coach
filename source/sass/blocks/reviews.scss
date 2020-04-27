@@ -1,16 +1,16 @@
 .reviews {
-  &__wrapper {
+  &__back-wrapper {
     @include back("../img/flowers-reviews.png");
     padding: 80px 80px 100px;
     background-size: cover;
     box-sizing: border-box;
-    margin: 30px auto;
   }
 
   &__inner-wrapper {
     background-color: $white;
     padding: 30px 50px;
     color: $grey;
+    box-sizing: border-box;
   }
 
   &__header {
