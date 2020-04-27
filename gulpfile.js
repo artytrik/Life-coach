@@ -7,6 +7,16 @@ const minify = require('gulp-csso');
 const rename = require('gulp-rename');
 const del = require('del');
 const ghPages = require('gulp-gh-pages');
+const babel = require('gulp-babel');
+
+const dirs = {
+  src: 'source',
+  dest: 'build'
+}
+
+const sources = {
+  scripts: `${dirs.src}/js/**/*.js`,
+}
 
 gulp.task('style', () => (
   gulp.src('source/sass/style.scss')
@@ -20,6 +30,12 @@ gulp.task('style', () => (
     .pipe(server.stream()))
 );
 
+gulp.task('js', () => (
+  gulp.src(sources.scripts)
+    .pipe(babel({ presets: ['@babel/preset-env']}))
+    .pipe(gulp.dest(`${dirs.dest}/js`))
+));
+
 gulp.task('serve', () => {
   server.init({
     server: 'build/',
@@ -32,6 +48,7 @@ gulp.task('serve', () => {
   gulp.watch('source/sass/**/*.{scss,sass}', gulp.series('style'));
   gulp.watch('source/img/**/*.{png,jpg,svg,webp}', gulp.series('copy', 'reload'));
   gulp.watch('source/*.html', gulp.series('copy', 'reload'));
+  gulp.watch('source/js/**/*.js', gulp.series('js', 'reload'));
 });
 
 gulp.task('reload', (done) => {
@@ -60,6 +77,6 @@ gulp.task('deploy', () => (
   )
 );
 
-gulp.task('build', gulp.series('clean', gulp.parallel('copy', 'style')));
+gulp.task('build', gulp.series('clean', gulp.parallel('copy', 'style', 'js')));
 
 gulp.task('start', gulp.series('build', 'serve'));
