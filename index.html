@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Life Coach</title>
-  <link href="css/style.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 <body>
   <header class="page-header">
@@ -22,7 +22,7 @@
           <li class="site-list__item"><a href="#sessions" class="site-list__link anchor">Sessions</a></li>
           <li class="site-list__item"><a href="#programme" class="site-list__link anchor">Programme</a></li>
           <li class="site-list__item"><a href="#feedback" class="site-list__link anchor">Feedback</a></li>
-          <li class="site-list__item"><a href="#" class="site-list__link">Contact</a></li>
+          <li class="site-list__item"><a href="contact.html" class="site-list__link">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -44,7 +44,7 @@
           <p class="about__description">This is a great space to write long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide.</p>
         </div>
         <div class="about__image"><img src="img/emilia.jpg" alt="Emilia Vladimirova"></div>
-        <button type="button" class="about__contact button">Contact</button>
+        <a href="contact.html" class="about__contact button">Contact</a>
       </div>
     </section>
     <section class="reviews">
@@ -73,9 +73,9 @@
               </div>
             </div>
           </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next reviews__next"></div>
+          <div class="swiper-button-prev reviews__prev"></div>
+          <div class="swiper-pagination reviews__pagination"></div>
         </div>
       </div>
     </section>
@@ -87,19 +87,19 @@
             <div class="sessions__image"><img src="img/sessions-1.jpg" alt="Sessions-1"></div>
             <h3 class="sessions__item-header">Individual consultation</h3>
             <p class="sessions__item-description">Make this yours. Add images, text and links, or connect data from your collection.</p>
-            <a href="#" class="sessions__item-button button">Read more</a>
+            <a href="consultation.html" class="sessions__item-button button">Read more</a>
           </li>
           <li class="sessions__item">
             <div class="sessions__image"><img src="img/sessions-2.jpg" alt="Sessions-2"></div>
             <h3 class="sessions__item-header">Group sessions in Moscow</h3>
             <p class="sessions__item-description">Make this yours. Add images, text and links, or connect data from your collection.</p>
-            <a href="#" class="sessions__item-button button">Read more</a>
+            <a href="sessions.html" class="sessions__item-button button">Read more</a>
           </li>
           <li class="sessions__item">
             <div class="sessions__image"><img src="img/sessions-3.jpg" alt="Sessions-3"></div>
             <h3 class="sessions__item-header">Treat abroad</h3>
             <p class="sessions__item-description">Make this yours. Add images, text and links, or connect data from your collection.</p>
-            <a href="#" class="sessions__item-button button">Read more</a>
+            <a href="treat.html" class="sessions__item-button button">Read more</a>
           </li>
         </ul>
       </div>
@@ -157,57 +157,32 @@
         <div class="feedback__logo"><img src="img/pink-apple.png" alt="Pink apple"></div>
       </div>
     </section>
-    <footer class="page-footer">
-      <div class="page-footer__wrapper">
-        <div class="page-footer__inner-wrapper">
-          <div class="page-footer__logo"><img src="img/white-apple.png" alt="White apple"></div>
-          <p class="page-footer__text">500 Terry Francois Street
-          <br>San Francisco, CA 94158</p>
-          <div class="page-footer__link-block">
-            <a href="#" class="page-footer__link">Tel: 123-456-7890</a>
-            <a href="#" class="page-footer__link">Fax: 123-456-7890​</a>
-          </div>
-          <div class="page-footer__link-block">
-            <a href="#" class="page-footer__link">info@mysite.com</a>
-          </div>
-          <ul class="social-list">
-            <li class="social-list__item"><a href="#" class="social-list__link"><img src="img/youtube.webp" alt="Youtube"></a></li>
-            <li class="social-list__item"><a href="#" class="social-list__link"><img src="img/instagram.webp" alt="Instagram"></a></li>
-            <li class="social-list__item"><a href="#" class="social-list__link"><img src="img/facebook.webp" alt="Facebook"></a></li>
-          </ul>
-        </div>
-        <p class="page-footer__copyright">© 2023 by Tsarinas.</p>
-      </div>
-    </footer>
   </main>
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <div class="page-footer__inner-wrapper">
+        <div class="page-footer__logo"><img src="img/white-apple.png" alt="White apple"></div>
+        <p class="page-footer__text">500 Terry Francois Street
+        <br>San Francisco, CA 94158</p>
+        <div class="page-footer__link-block">
+          <a href="#" class="page-footer__link">Tel: 123-456-7890</a>
+          <a href="#" class="page-footer__link">Fax: 123-456-7890​</a>
+        </div>
+        <div class="page-footer__link-block">
+          <a href="#" class="page-footer__link">info@mysite.com</a>
+        </div>
+        <ul class="social-list">
+          <li class="social-list__item"><a href="#" class="social-list__link"><img src="img/youtube.webp" alt="Youtube"></a></li>
+          <li class="social-list__item"><a href="#" class="social-list__link"><img src="img/instagram.webp" alt="Instagram"></a></li>
+          <li class="social-list__item"><a href="#" class="social-list__link"><img src="img/facebook.webp" alt="Facebook"></a></li>
+        </ul>
+      </div>
+      <p class="page-footer__copyright">© 2023 by Tsarinas.</p>
+    </div>
+  </footer>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="js/index.js"></script>
   <script src="js/swiper.js"></script>
-  <style>
-    .swiper-pagination-bullet {
-      border-radius: 0;
-    }
-
-    .swiper-pagination-bullet-active {
-      background-color: rgb(166, 36, 76);
-    }
-
-    .swiper-button-prev {
-      left: 0;
-      width: 50px;
-      height: 50px;
-      background-color: rgb(166, 36, 76);
-      color: #fff;
-    }
-
-    .swiper-button-next {
-      right: 0;
-      width: 50px;
-      height: 50px;
-      background-color: rgb(166, 36, 76);
-      color: #fff;
-    }
-  </style>
 </body>
 </html>
