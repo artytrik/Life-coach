@@ -1,0 +1,17 @@
+.photos {
+  padding-bottom: 50px;
+
+  &__wrapper {
+    background-color: $white;
+    padding: 30px;
+  }
+
+  &__photo {
+    height: 300px;
+  }
+
+  &__prev,
+  &__next {
+    color: $white;
+  }
+}

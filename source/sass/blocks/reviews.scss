@@ -37,4 +37,28 @@
   &__description {
     text-align: center;
   }
+
+  &__pagination .swiper-pagination-bullet {
+    border-radius: 0;
+  }
+
+  &__pagination .swiper-pagination-bullet-active {
+    background-color: rgb(166, 36, 76);
+  }
+
+  &__prev {
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(166, 36, 76);
+    color: #fff;
+  }
+
+  &__next {
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(166, 36, 76);
+    color: #fff;
+  }
 }

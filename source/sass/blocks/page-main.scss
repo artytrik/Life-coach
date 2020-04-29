@@ -1,4 +1,10 @@
 .page-main {
+  &--inner {
+    @include back("../img/flowers-reviews.png");
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
   &__header {
     font-size: 35px;
     line-height: 1.2em;

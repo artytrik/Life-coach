@@ -1,0 +1,35 @@
+.inner-page {
+  display: flex;
+  padding-bottom: 50px;
+
+  &__text-block {
+    background-color: $white;
+    width: 40%;
+    padding: 40px 5% 40px 1%;
+    box-sizing: border-box;
+    height: 500px;
+  }
+
+  &__image {
+    width: 60%;
+
+    & img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+  }
+
+  &__header {
+    text-transform: none;
+    font-size: 40px;
+  }
+
+  &__strong {
+    @include font(16px, normal, "Candara Bold", #110A2B);
+  }
+
+  &__description {
+    @include font (15px, 1.5em);
+  }
+}
