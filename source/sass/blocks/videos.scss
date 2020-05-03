@@ -1,0 +1,46 @@
+.videos {
+  &__wrapper {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 80px 30px;
+  }
+
+  &__header {
+    margin: 0;
+    color: $white;
+    @include font(17px, 2em, "Candara Bold");
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__small-header,
+  &__big-header {
+    display: block;
+  }
+
+  &__small-header {
+    font-size: 18px;
+  }
+
+  &__big-header {
+    font-size: 36px;
+    letter-spacing: 0.3em;
+  }
+
+  &__video {
+    position: relative;
+  }
+
+  &__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+}

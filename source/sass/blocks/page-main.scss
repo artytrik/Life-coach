@@ -5,6 +5,10 @@
     background-attachment: fixed;
   }
 
+  &--videos {
+    background-color: $black;
+  }
+
   &__header {
     font-size: 35px;
     line-height: 1.2em;

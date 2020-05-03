@@ -1,0 +1,43 @@
+.videos-slider {
+  padding: 10px 60px;
+  color: $white;
+
+  &__wrapper {
+    margin: 0 auto;
+  }
+
+  &__video {
+    position: relative;
+  }
+
+  &__play {
+    & svg {
+      fill: $white;
+    }
+  }
+
+  &__text-block {
+    width: 80%;
+    font-size: 14px;
+  }
+
+  &__description {
+    font-size: 11px;
+    letter-spacing: normal;
+  }
+
+  &__prev,
+  &__next {
+    color: $white;
+    top: 80px;
+  }
+
+  &__container {
+    margin-bottom: 80px;
+  }
+
+  &__logo {
+    width: 6%;
+    margin: 0 auto;
+  }
+}
