@@ -2,16 +2,35 @@
   display: flex;
   padding-bottom: 50px;
 
+  @include tablet {
+    padding: 0;
+  }
+
+  @include tablet {
+    flex-direction: column;
+  }
+
   &__text-block {
     background-color: $white;
     width: 40%;
     padding: 40px 5% 40px 1%;
     box-sizing: border-box;
     height: 500px;
+
+    @include tablet {
+      width: 100%;
+      padding: 5%;
+    }
   }
 
   &__image {
     width: 60%;
+
+    @include tablet {
+      width: 100%;
+      order: -1;
+      height: 250px;
+    }
 
     & img {
       width: 100%;

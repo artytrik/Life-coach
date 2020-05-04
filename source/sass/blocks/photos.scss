@@ -1,9 +1,17 @@
 .photos {
   padding-bottom: 50px;
 
+  @include tablet {
+    padding: 0;
+  }
+
   &__wrapper {
     background-color: $white;
     padding: 30px;
+
+    @include tablet {
+      padding: 0;
+    }
   }
 
   &__photo {

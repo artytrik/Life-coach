@@ -8,7 +8,7 @@
   <link href="css/style.min.css" rel="stylesheet">
 </head>
 <body>
-  <header class="page-header">
+  <header class="page-header page-header--closed">
     <div class="page-header__wrapper">
       <div class="page-header__logo-wrapper">
         <a href="index.html" class="logo">
@@ -25,6 +25,9 @@
           <li class="site-list__item"><a href="contact.html" class="site-list__link">Contact</a></li>
         </ul>
       </nav>
+      <button class="page-header__toggle toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
     </div>
   </header>
   <main class="page-main page-main--videos">
@@ -132,7 +135,9 @@
       <p class="page-footer__copyright">© 2023 by Tsarinas.</p>
     </div>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="js/videos.js"></script>
+  <script src="js/index.js"></script>
 </body>
 </html>
