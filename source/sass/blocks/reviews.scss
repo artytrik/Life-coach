@@ -1,9 +1,21 @@
 .reviews {
+  @include tablet {
+    margin-top: 70px;
+  }
+
+  &__wrapper {
+    padding: 0;
+  }
+
   &__back-wrapper {
     @include back("../img/flowers-reviews.png");
     padding: 80px 80px 100px;
     background-size: cover;
     box-sizing: border-box;
+
+    @include tablet {
+      padding: 12%;
+    }
   }
 
   &__inner-wrapper {
@@ -11,6 +23,10 @@
     padding: 30px 50px;
     color: $grey;
     box-sizing: border-box;
+
+    @include tablet {
+      padding: 10%;
+    }
   }
 
   &__header {
@@ -31,6 +47,10 @@
       height: 2px;
 
       background-color: $grey;
+
+      @include tablet {
+        width: 45%;
+      }
     }
   }
 
@@ -48,17 +68,22 @@
 
   &__prev {
     left: 0;
-    width: 50px;
-    height: 50px;
-    background-color: rgb(166, 36, 76);
-    color: #fff;
   }
 
   &__next {
     right: 0;
+  }
+
+  &__prev,
+  &__next {
     width: 50px;
     height: 50px;
     background-color: rgb(166, 36, 76);
     color: #fff;
+
+    @include tablet {
+      width: 30px;
+      height: 50px;
+    }
   }
 }

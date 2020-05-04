@@ -2,9 +2,24 @@
   @include clear-ul;
 
   display: flex;
+  justify-content: flex-end;
+
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+  }
 
   &__item {
     margin-right: 40px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include tablet {
+      margin-right: 0;
+    }
   }
 
   &__link {
@@ -16,13 +31,26 @@
     font-weight: bold;
     font-size: 12px;
 
+    @include tablet {
+      font-size: 26px;
+      text-transform: none;
+    }
+
     &:hover,
     &:active {
       color: $yellow;
+
+      @include tablet {
+        color: $blue;
+      }
     }
 
     &--active {
       color: $yellow;
+
+      @include tablet {
+        color: $blue;
+      }
     }
   }
 }

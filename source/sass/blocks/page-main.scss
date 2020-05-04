@@ -20,6 +20,10 @@
 
   &__block {
     margin-top: 100px;
+
+    @include tablet {
+      margin-top: 70px;
+    }
   }
 
   &__container {

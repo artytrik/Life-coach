@@ -21,18 +21,37 @@
   &__logo {
     width: 7%;
     margin-top: -20px;
+
+    @include tablet {
+      margin: 0 auto;
+      margin-top: -20px;
+      width: 20%;
+    }
   }
 
   &__text {
     margin: 0;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__link {
     display: block;
     color: $white;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__copyright {
     margin-left: 16%;
+
+    @include tablet {
+      margin: 0;
+      text-align: center;
+    }
   }
 }

@@ -1,6 +1,8 @@
 const header = document.querySelector(`.page-header`);
 const stickyClass = `page-header--sticky`;
 const headerAnchors = header.querySelectorAll(`.anchor`);
+const pageHeader = document.querySelector(`.page-header`);
+const toggle = pageHeader.querySelector(`.page-header__toggle`);
 
 window.onscroll = () => document.documentElement.scrollTop > 1 ?
   header.classList.add(stickyClass) :
@@ -28,3 +30,11 @@ $('.page-main__scroll').each(function(i) {
     }
   });
 }).scroll();
+
+const onToggleClick = (evt) => {
+  evt.preventDefault();
+
+  pageHeader.classList.toggle(`page-header--opened`);
+};
+
+toggle.addEventListener(`click`, onToggleClick);

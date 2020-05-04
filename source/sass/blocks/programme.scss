@@ -17,6 +17,10 @@
     box-sizing: border-box;
     margin: 0 auto;
 
+    @include tablet {
+      padding: 8%;
+    }
+
     &::before, &::after {
       @include pseudo;
 
@@ -49,6 +53,10 @@
     line-height: 1em;
     margin: 0;
     margin-bottom: 10px;
+
+    @include tablet {
+      font-size: 36px;
+    }
   }
 
   &__first-description {
@@ -64,10 +72,22 @@
     font-size: 17px;
     line-height: 1.5em;
     margin-bottom: 10px;
+
+    @include tablet {
+      width: 100%;
+    }
   }
 
   &__button {
     width: 170px;
     margin: 0 auto;
+
+    @include tablet {
+      width: 50%;
+    }
+
+    @include mobile {
+      width: 70%;
+    }
   }
 }

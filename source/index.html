@@ -8,7 +8,7 @@
   <link href="css/style.min.css" rel="stylesheet">
 </head>
 <body>
-  <header class="page-header">
+  <header class="page-header page-header--closed">
     <div class="page-header__wrapper">
       <div class="page-header__logo-wrapper">
         <a href="index.html" class="logo">
@@ -25,6 +25,9 @@
           <li class="site-list__item"><a href="contact.html" class="site-list__link">Contact</a></li>
         </ul>
       </nav>
+      <button class="page-header__toggle toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
     </div>
   </header>
   <main class="page-main page-main__scroll" id="main">
@@ -120,7 +123,7 @@
     <section class="feedback page-main__block page-main__scroll" id="feedback">
       <div class="feedback__wrapper page-main__container">
         <h2 class="feedback__header page-main__header">Feedback</h2>
-        <a href="#" class="feedback__more-link">See more</a>
+        <a href="#" class="feedback__more-link feedback__more-link--up">See more</a>
         <ul class="feedback__list">
           <li class="feedback__item">
             <div class="feedback__inner-wrapper">

@@ -1,0 +1,57 @@
+.toggle {
+  position: relative;
+
+  align-self: center;
+  width: 26px;
+  height: 22px;
+
+  background-color: $pink;
+
+  cursor: pointer;
+  border: none;
+}
+
+.page-header--closed .toggle::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 25px;
+  height: 2px;
+
+  background-color: $black;
+  box-shadow: 0 10px 0 0 $black, 0 20px 0 0 $black;
+}
+
+.page-header--opened .toggle {
+  background-color: $white;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 10px;
+    left: 0;
+
+    width: 25px;
+    height: 2px;
+
+    background-color: $black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.page-header--sticky .toggle {
+  background-color: $white;
+}

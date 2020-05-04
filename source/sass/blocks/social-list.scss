@@ -5,6 +5,10 @@
   justify-content: space-between;
   width: 12%;
 
+  @include tablet {
+    display: none;
+  }
+
   &__item {
     width: 25px;
     height: 25px;

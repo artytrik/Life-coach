@@ -1,8 +1,10 @@
 .page-header {
   background-color: $pink;
-  transition: all 0.4s ease;
   border-top: 5px solid $pink;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  position: relative;
+  box-sizing: border-box;
+  z-index: 100;
 
   &__wrapper {
     max-width: $desktop-width;
@@ -13,12 +15,26 @@
   }
 
   &__logo-wrapper {
-    width: 30%;
+    width: 31%;
     margin-top: 10px;
+
+    @include tablet {
+      width: 100%;
+      margin: 10px 0;
+    }
   }
 
   &__navigation {
-    width: 55%;
+    width: 65%;
+
+    @include tablet {
+      position: fixed;
+      top: -5px;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: $white;
+    }
   }
 
   &--sticky {
@@ -26,10 +42,29 @@
     top: 0;
     width: 100%;
     background-color: $white;
-    z-index: 100;
 
     & + .page-main {
       padding-top: 71px;
     }
   }
+
+  &__toggle {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+}
+
+.page-header--closed .page-header__navigation {
+  display: block;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.page-header--opened .page-header__navigation {
+  display: block;
 }

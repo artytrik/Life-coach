@@ -3,6 +3,8 @@
 var header = document.querySelector(".page-header");
 var stickyClass = "page-header--sticky";
 var headerAnchors = header.querySelectorAll(".anchor");
+var pageHeader = document.querySelector(".page-header");
+var toggle = pageHeader.querySelector(".page-header__toggle");
 
 window.onscroll = function () {
   return document.documentElement.scrollTop > 1 ? header.classList.add(stickyClass) : header.classList.remove(stickyClass);
@@ -27,3 +29,10 @@ $(window).scroll(function () {
     }
   });
 }).scroll();
+
+var onToggleClick = function onToggleClick(evt) {
+  evt.preventDefault();
+  pageHeader.classList.toggle("page-header--opened");
+};
+
+toggle.addEventListener("click", onToggleClick);

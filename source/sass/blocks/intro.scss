@@ -2,21 +2,30 @@
   @include back("../img/book.jpg");
   background-size: cover;
   background-attachment: fixed;
-  background-position: 0 -50px;
+  background-position: center -50px;
 
   &__wrapper {
     padding: 80px 30px 100px;
     margin: 0 auto;
+
+    @include tablet {
+      padding: 30px;
+    }
   }
 
   &__title {
     display: block;
     margin-bottom: 40px;
 
-    @include font(27px, 1em, "Candara");
+    @include font(27px, 1em, "Candara Bold");
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.2em;
+
+    @include tablet {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
   }
 
   &__author {
