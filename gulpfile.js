@@ -67,6 +67,7 @@ gulp.task('serve', () => {
   gulp.watch('source/img/**/*.{png,jpg,svg,webp}', gulp.series('copy', 'reload'));
   gulp.watch('source/*.html', gulp.series('copy', 'reload'));
   gulp.watch('source/js/**/*.js', gulp.series('js', 'reload'));
+  gulp.watch('source/*.php', gulp.series('copy', 'reload'));
 });
 
 gulp.task('reload', (done) => {
@@ -78,7 +79,8 @@ gulp.task('copy', () => (
   gulp.src([
     'source/fonts/**/*.{woff,woff2}',
     'source/*.html',
-    'source/img/**/*.{png,jpg,svg,webp}'
+    'source/img/**/*.{png,jpg,svg,webp}',
+    'source/*.php'
   ], {
     base: 'source'
   })

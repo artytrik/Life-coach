@@ -1,0 +1,24 @@
+.language-list {
+  @include clear-ul;
+
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 6%;
+}
+
+.language__list-item-link {
+  display: block;
+  padding: 2%;
+  color: $black;
+  font-size: 2vh;
+  font-family: "Candara Bold","Arial",sans-serif;
+
+  &:hover {
+    color: $yellow;
+  }
+}
+
+.language__list-item-link--active {
+  color: $yellow;
+}

@@ -6,7 +6,7 @@
     display: block;
     text-align: center;
 
-    @include font(20px, 1.4em);
+    @include font(4vh, 1.4em);
     font-family: "Candara Bold", "Arial", sans-serif;
     text-transform: uppercase;
   }
@@ -15,7 +15,7 @@
     display: block;
     text-align: center;
 
-    @include font(15px, 1.4em);
+    @include font(3vh, 1.4em);
     letter-spacing: 0.15em;
   }
 }
