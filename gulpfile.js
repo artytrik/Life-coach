@@ -6,7 +6,6 @@ const server = require('browser-sync').create();
 const minify = require('gulp-csso');
 const rename = require('gulp-rename');
 const del = require('del');
-const ghPages = require('gulp-gh-pages');
 const babel = require('gulp-babel');
 const imagemin = require('gulp-imagemin');
 const imgCompress = require('imagemin-jpeg-recompress');
@@ -90,12 +89,6 @@ gulp.task('copy', () => (
 gulp.task('clean', () => (
   del('build')
 ));
-
-gulp.task('deploy', () => (
-  gulp.src('./build/**/*')
-    .pipe(ghPages())
-  )
-);
 
 gulp.task('build', gulp.series('clean', gulp.parallel('copy', 'style', 'js', 'img')));
 
