@@ -11,18 +11,19 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "7.9.0",
-    "@babel/preset-env": "7.9.5",
-    "autoprefixer": "9.7.6",
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "autoprefixer": "^10.2.6",
     "browser-sync": "^2.26.14",
-    "del": "5.1.0",
+    "del": "^5.1.0",
     "gulp": "4.0.2",
     "gulp-babel": "8.0.0",
     "gulp-csso": "4.0.1",
     "gulp-imagemin": "7.1.0",
-    "gulp-postcss": "8.0.0",
+    "gulp-postcss": "^9.0.0",
     "gulp-rename": "2.0.0",
-    "gulp-sass": "4.0.2",
-    "imagemin-jpeg-recompress": "6.0.0"
+    "gulp-sass": "^4.1.0",
+    "imagemin-jpeg-recompress": "^6.0.0",
+    "postcss": "^8.3.0"
   }
 }
